@@ -6,7 +6,7 @@ import compile from 'wat-compiler'
 export class Options {
   @arg('<file>', 'The .wat file to run') file!: string
   @arg('--', '[...args]', 'The arguments to pass to the function') args: (string | number)[] = []
-  @arg('-n', '--name', 'The exported function name to use (default: "main")') name = 'main'
+  @arg('-n', '--name', 'The exported function name to use') name = 'main'
   @arg('-i', '--iterations', 'Bench iterations') iterations = 0
 
   static examples = {

@@ -1,9 +1,11 @@
-import { run } from '../src'
+import { Options, run } from '../src'
 
 console.log(
-  run({
-    file: __dirname + '/math.wat',
-    args: [1, '2'],
-    name: 'add',
-  })
+  run(
+    new Options({
+      file: __dirname + '/math.wat',
+      args: [1, '2'],
+      name: 'add',
+    })
+  )
 )
